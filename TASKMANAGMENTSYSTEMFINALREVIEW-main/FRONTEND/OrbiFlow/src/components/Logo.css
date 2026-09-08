@@ -1,0 +1,52 @@
+.orbiflow-logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.orbiflow-logo-img {
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.orbiflow-logo-wrapper:hover .orbiflow-logo-img {
+  transform: scale(1.05) rotate(-2deg);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+.orbiflow-logo-text {
+  font-size: 1.05rem;
+  background: linear-gradient(90deg,#6366f1,#8b5cf6,#ec4899);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Variants */
+.variant-sidebar .orbiflow-logo-img { 
+  width: 60px !important; 
+  height: 60px !important; 
+}
+.variant-sidebar .orbiflow-logo-text { font-size: 1.15rem; }
+
+.variant-header .orbiflow-logo-img { 
+  width: 54px !important; 
+  height: 54px !important; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .variant-sidebar .orbiflow-logo-img { width: 46px !important; height: 46px !important; }
+  .variant-sidebar .orbiflow-logo-text { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .orbiflow-logo-text { display: none; }
+  .variant-sidebar .orbiflow-logo-img { width: 42px !important; height: 42px !important; }
+}
